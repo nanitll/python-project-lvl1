@@ -15,17 +15,16 @@ def pool(name):
     print('Answer "yes" if the number is even, otherwise answer "no".')
     i = 0
     for i in range(3):
-        i = random.randint(1,50)
-
-        print("Question: {}".format(i))
+        random_number = random.randint(1,50)
+        print("Question: {}".format(random_number))
         answer = prompt.string(prompt = "You answer: ")
 
-        if checking_answer(i) == answer:
+        if checking_answer(random_number) == answer:
             print("Correct!")
-        elif (checking_answer == "yes"):
+        elif (checking_answer(random_number) == "yes"):
             print("'{}' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, Bill!".format(answer))
             return 0
-        elif (checking_answer == "no"):
+        elif (checking_answer(random_number) == "no"):
             print("'{}' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, Bill!".format(answer))
             return 0
     print("Congratulations, {}!".format(name))
