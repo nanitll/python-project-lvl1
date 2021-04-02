@@ -19,12 +19,12 @@ def pool(name):
         print("Question: {}".format(random_number))
         answer = prompt.string(prompt = "You answer: ")
 
-        if checking_answer(random_number) == answer:
+        if checking_answer(random_number).lower == answer.lower:
             print("Correct!")
-        elif (checking_answer(random_number) == "yes"):
-            print("'{}' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, Bill!".format(answer))
+        elif (checking_answer(random_number).lower == "yes"):
+            print("'{}' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, {}!".format(answer,name))
             return 0
-        elif (checking_answer(random_number) == "no"):
-            print("'{}' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, Bill!".format(answer))
+        elif (checking_answer(random_number).lower == "no"):
+            print("'{}' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, {}!".format(answer,name))
             return 0
     print("Congratulations, {}!".format(name))
