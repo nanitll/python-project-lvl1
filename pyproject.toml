@@ -6,7 +6,7 @@ authors = ["nanitll <pasha-s98@ya.ru>"]
 
 [tool.poetry.dependencies]
 python = "^3.7"
-paackages = [
+packages = [
     { include = "brain_games" }
 ]
 
