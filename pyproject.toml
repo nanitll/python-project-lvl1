@@ -3,12 +3,12 @@ name = "hexlet-code"
 version = "0.1.6"
 description = ""
 authors = ["nanitll <pasha-s98@ya.ru>"]
-
-[tool.poetry.dependencies]
-python = "^3.7"
 packages = [
     { include = "brain_games" },
 ]
+
+[tool.poetry.dependencies]
+python = "^3.7"
 
 [tool.poetry.dev-dependencies]
 
