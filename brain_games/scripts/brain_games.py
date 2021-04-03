@@ -1,5 +1,5 @@
 #!usr/bin/env python3
-
+import prompt
 from brain_games.cli import welcome_user
 from brain_games.scripts.games.brain_even import even 
 from brain_games.scripts.games.brain_calc import calc
@@ -10,12 +10,20 @@ from brain_games.scripts.games.brain_prime import prime
 def main():
     print("Welcome to the Brain Games!")
     user = str(welcome_user())    
+    act = prompt.string("")
+    while act != "logout":
+        if act == "brain-calc": calc(user)
+        elif act == "brain-even": even(user)
+        elif act == "brain-gcd": gcd(user)
+        elif act == "brain-prime": prime(user)
+        elif act == "brain-progression": progression(user)
+        act = prompt.string("")
+        
     #even(user)
     #calc(user)
     #gcd(user)
     #progression(user)
-    prime(user)
-
+    #prime(user)
     return 0
 
     
