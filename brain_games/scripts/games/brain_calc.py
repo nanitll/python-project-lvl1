@@ -41,11 +41,11 @@ def culc_rand():
             print("Question: {} - {}".format(s[0],s[1]))
             return s[2]
 def main():
-    user_name = brain_games.cli.welcome_user()
+
     print("What is the result of the expression?")
+    user_name = brain_games.cli.welcome_user()
     for i in range (3):
-        right_answer = culc_rand()
-        
+        right_answer = culc_rand()        
         answer = prompt.string("You answer: ")
         if (answer == right_answer):
             print ("Correct!")
