@@ -11,7 +11,7 @@ def main():
     print("Welcome to the Brain Games!")
     user = str(welcome_user())    
     act = prompt.string("")
-    while act != "logout":
+    while act != "logout" or act != "to be_stopped":
         if act == "brain-calc": calc(user)
         elif act == "brain-even": even(user)
         elif act == "brain-gcd": gcd(user)
