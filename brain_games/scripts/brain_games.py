@@ -20,7 +20,8 @@ def menu(user,act):
 def main():
   
 
-    user = str(welcome_user())    
+    user = str(welcome_user())  
+    print("Hello, {}".format(user))  
     while (True):
         act = prompt.string("")
         if act == "brain-calc": calc(user) 
