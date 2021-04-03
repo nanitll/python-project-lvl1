@@ -7,17 +7,35 @@ from brain_games.scripts.games.brain_gcd import gcd
 from brain_games.scripts.games.brain_progression import progression
 from brain_games.scripts.games.brain_prime import prime
 
-def main():
-    
-    user = str(welcome_user()) 
+def menu(user,act):
     while (True):
-        act = prompt.string("")
-        if act == "brain-calc": calc(user)
-        elif act == "brain-even": even(user)
-        elif act == "brain-gcd": gcd(user)
-        elif act == "brain-prime": prime(user)
-        elif act == "brain-progression": progression(user)
+        if act == "brain-calc": 
+            calc(user) 
+            act = prompt.string("")
+        elif act == "brain-even": 
+            even(user) 
+            act = prompt.string("")
+        elif act == "brain-gcd": 
+            gcd(user) 
+            act = prompt.string("")
+        elif act == "brain-prime": 
+            prime(user) 
+            act = prompt.string("")
+        elif act == "brain-progression": 
+            progression(user) 
+            act = prompt.string("")
         elif act == "logout" or act == "to be_stopped": break
+        else: act = prompt.string("")
+
+def main():
+    user = str(welcome_user()) 
+
+    while(True):
+        act = prompt.string("") 
+        if act == "brain-games": 
+            menu(user,act) 
+            break 
+        if act == "logout" or act == "to be_stopped": break
     return 0
     
 
