@@ -35,6 +35,7 @@ def main():
             menu(user,act) 
             break 
         #if act == "logout" or act == "expect": break
+        break
     return 0
     
 
