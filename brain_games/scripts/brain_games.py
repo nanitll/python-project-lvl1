@@ -1,12 +1,12 @@
 #!usr/bin/env python3
 
 from brain_games.cli import welcome_user
-from .brain_even import pool
+from .brain_even import even
 
 def main():
     print("Welcome to the Brain Games!")
     user = str(welcome_user())    
-    pool(user)
+    even(user)
 
     
 

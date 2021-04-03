@@ -10,7 +10,7 @@ def checking_answer(number):
         correct_answer = "no"
     return correct_answer
 
-def pool(name):
+def even(name):
     print('Answer "yes" if the number is even, otherwise answer "no".')
     i = 0
     for i in range(3):
