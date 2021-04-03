@@ -30,7 +30,7 @@ def rand_mult():
 
 
 def culc_rand():
-    rand_i = random.randint(1,3)
+    rand_i = random.randint(1, 3)
     if rand_i == 1:
         s = rand_summ()
         print("Question: {} + {}".format(s[0], s[1]))
@@ -50,10 +50,10 @@ def main():
     print("What is the result of the expression?")
     user_name = brain_games.cli.welcome_user()
     for __i in range(3):
-        right_answer = culc_rand()        
+        right_answer = culc_rand()
         answer = prompt.string("You answer: ")
         if (answer == right_answer):
-            print ("Correct!")
+            print("Correct!")
         else:
             brain_games.cli.wrong_answer(answer, right_answer, user_name)
             return 0

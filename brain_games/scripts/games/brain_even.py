@@ -12,6 +12,7 @@ def checking_answer(number):
         correct_answer = "no"
     return correct_answer
 
+
 def main():
     user_name = brain_games.cli.welcome_user()
     print('Answer "yes" if the number is even, otherwise answer "no".')

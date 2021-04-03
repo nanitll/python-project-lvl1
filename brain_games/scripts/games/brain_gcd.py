@@ -6,7 +6,7 @@ from brain_games import cli
 
 
 def calc_gcd(x, y):
-    while x != 0 and y !=0:
+    while x != 0 and y != 0:
         if x > y:
             x = x % y
         else:
