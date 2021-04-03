@@ -37,3 +37,4 @@ def prime(user_name):
         else:
             wrong_answer(answer,right_answer,user_name)
             return 0
+    return 0
