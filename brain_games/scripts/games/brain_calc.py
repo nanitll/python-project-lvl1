@@ -30,18 +30,19 @@ def culc_rand():
         rand_i = random.randint(1,3)
         if rand_i == 1:
             s = rand_summ()
-            print("What is the result of the expression? {}+{}".format(s[0],s[1]))
+            print("Question: {} - {}".format(s[0],s[1]))
             return s[2]
         elif rand_i == 2:
             s = rand_diff()
-            print("What is the result of the expression? {}-{}".format(s[0],s[1]))
+            print("Question: {} - {}".format(s[0],s[1]))
             return s[2]
         else:
             s = rand_mult()
-            print("What is the result of the expression? {}*{}".format(s[0],s[1]))
+            print("Question: {} - {}".format(s[0],s[1]))
             return s[2]
 def main():
     user_name = brain_games.cli.welcome_user()
+    print("What is the result of the expression?")
     for i in range (3):
         right_answer = culc_rand()
         
