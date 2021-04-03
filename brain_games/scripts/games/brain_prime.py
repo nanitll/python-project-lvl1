@@ -28,7 +28,7 @@ def prime_check(number):
 def main():
     user_name = brain_games.cli.welcome_user()
     print('Answer "yes" if given number is prime. Otherwise answer "no".')
-    for i in range (3):
+    for __i in range (3):
         random_number = random.randint(0,50)
         right_answer = prime_check(random_number)         
         print("Question: {}".format(random_number))

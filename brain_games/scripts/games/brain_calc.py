@@ -44,7 +44,7 @@ def main():
 
     print("What is the result of the expression?")
     user_name = brain_games.cli.welcome_user()
-    for i in range (3):
+    for __i in range (3):
         right_answer = culc_rand()        
         answer = prompt.string("You answer: ")
         if (answer == right_answer):

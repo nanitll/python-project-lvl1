@@ -9,7 +9,7 @@ def generate_number_list() :
     y = random.randint(1 , 8)
     z = random.randint(2 , 6)
     
-    for i in range(10) :
+    for __i in range(10) :
         number_list.append(str(y))
         y = y + z
         

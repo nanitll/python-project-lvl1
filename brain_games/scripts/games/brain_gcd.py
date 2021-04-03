@@ -16,7 +16,7 @@ def calc_gcd(x , y):
 def main():
     user_name = cli.welcome_user()
     print("Find the greatest common divisor of given numbers.")
-    for i in range(3):
+    for __i in range(3):
         random_number_one = random.randint(1 , 50)
         random_number_two = random.randint(1 , 50)
         print("Question: {} {}".format(random_number_one, random_number_two))
