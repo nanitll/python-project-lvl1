@@ -10,14 +10,19 @@ def generate_number_list() :
     
     for i in range(10) :
         number_list.append(str(y))
+<<<<<<< HEAD
         y = y+z
+=======
+        y = y+z+i
+>>>>>>> cf8c36b6887df0a656f87b7d31cb5822a32842e8
         
     return number_list
 
 def main() :
     name_user = brain_games.cli.welcome_user()
     print("What number is missing in the progression?")
-    for i in range (3) :
+    i=0
+    while i < 3:
         n = random.randint(0,9)
         list_number = generate_number_list()
         right_answer =list_number[n]
@@ -30,7 +35,9 @@ def main() :
         else:
             brain_games.cli.wrong_answer(answer,right_answer,name_user)
             return 0
-    print("Congratulations, {}".format(name_user))
+        i+=1
+    print("Congratulations, {}!".format(name_user))
+    
     return 0
 
 if __name__ == "__main__":
