@@ -30,7 +30,7 @@ def culc_rand():
         rand_i = random.randint(1,3)
         if rand_i == 1:
             s = rand_summ()
-            print("Question: {} - {}".format(s[0],s[1]))
+            print("Question: {} + {}".format(s[0],s[1]))
             return s[2]
         elif rand_i == 2:
             s = rand_diff()
@@ -38,7 +38,7 @@ def culc_rand():
             return s[2]
         else:
             s = rand_mult()
-            print("Question: {} - {}".format(s[0],s[1]))
+            print("Question: {} * {}".format(s[0],s[1]))
             return s[2]
 def main():
 
