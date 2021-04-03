@@ -28,18 +28,13 @@ def main():
         print("Question: {}".format(' '.join(list_number)))
         answer = prompt.string("Your answer: ")
         if answer == right_answer:
-            print ("Correct!")
+            print("Correct!")
         else:
             brain_games.cli.wrong_answer(answer, right_answer, name_user)
             return 0
-
-
     print("Congratulations, {}!".format(name_user))
     return 0
 
 
 if __name__ == "__main__":
     main()
-
-
-
