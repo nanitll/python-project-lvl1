@@ -28,14 +28,11 @@ def menu(user,act):
         act = prompt.string("")
 
 def main():
-    while(True):
-        act = prompt.string("") 
-        if act == "brain-games": 
-            user = str(welcome_user()) 
-            menu(user,act) 
-            break 
-        #if act == "logout" or act == "expect": break
-        break
+
+    user = str(welcome_user()) 
+    act = prompt.string("") 
+    menu(user,act) 
+           
     return 0
     
 
