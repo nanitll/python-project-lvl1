@@ -8,9 +8,10 @@ from brain_games.scripts.games.brain_progression import progression
 from brain_games.scripts.games.brain_prime import prime
 
 def main():
+    act = ''
     print("Welcome to the Brain Games!")
-    user = str(welcome_user())    
-    act = prompt.string("")
+    user = str(welcome_user()) 
+
     while act != "logout" or act != "to be_stopped":
         if act == "brain-calc": calc(user)
         elif act == "brain-even": even(user)
@@ -18,12 +19,7 @@ def main():
         elif act == "brain-prime": prime(user)
         elif act == "brain-progression": progression(user)
         act = prompt.string("")
-        
-    #even(user)
-    #calc(user)
-    #gcd(user)
-    #progression(user)
-    #prime(user)
+
     return 0
 
     
