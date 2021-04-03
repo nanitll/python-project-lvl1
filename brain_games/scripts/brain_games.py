@@ -9,28 +9,19 @@ from brain_games.scripts.games.brain_prime import prime
 
 def menu(user,act):
     while (True):
-        if act == "brain-calc": 
-            calc(user) 
-            act = prompt.string("")
-        elif act == "brain-even": 
-            even(user) 
-            act = prompt.string("")
-        elif act == "brain-gcd": 
-            gcd(user) 
-            act = prompt.string("")
-        elif act == "brain-prime": 
-            prime(user) 
-            act = prompt.string("")
-        elif act == "brain-progression": 
-            progression(user) 
-            act = prompt.string("")
-        else: break
         act = prompt.string("")
+        if act == "brain-calc": calc(user) 
+        elif act == "brain-even": even(user) 
+        elif act == "brain-gcd": gcd(user) 
+        elif act == "brain-prime": prime(user) 
+        elif act == "brain-progression": progression(user) 
+        else: break
+        
 
 def main():
 
     user = str(welcome_user()) 
-    act = prompt.string("") 
+    act = "" 
     menu(user,act) 
            
     return 0
