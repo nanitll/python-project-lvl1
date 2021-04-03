@@ -21,7 +21,7 @@ def main():
   
 
     user = str(welcome_user())  
-    print("Hello, {}".format(user))  
+    print("\nHello, {}".format(user))  
     while (True):
         act = prompt.string("")
         if act == "brain-calc": calc(user) 
