@@ -18,14 +18,17 @@ def menu(user,act):
         else: break
 
 def main():
-    while(True):
-        act = prompt.string("") 
-        if act == "brain-games": 
-            user = str(welcome_user()) 
-            menu(user,act) 
-            break 
-        #if act == "logout" or act == "expect": break
-        break
+  
+
+    user = str(welcome_user())    
+    while (True):
+        act = prompt.string("")
+        if act == "brain-calc": calc(user) 
+        elif act == "brain-even": even(user) 
+        elif act == "brain-gcd": gcd(user) 
+        elif act == "brain-prime": prime(user) 
+        elif act == "brain-progression": progression(user) 
+        else: break
     return 0
     
 
