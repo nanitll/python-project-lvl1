@@ -28,7 +28,7 @@ def main():
         else:
             cli.wrong_answer(answer, right_answer, user_name)
             return 0
-    print("Congratulations, {}".format(user_name))
+    print("Congratulations, {}!".format(user_name))
 
 
 if __name__ == "__main__":
