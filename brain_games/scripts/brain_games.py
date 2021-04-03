@@ -1,8 +1,9 @@
 #!usr/bin/env python3
+# in /home/nanit/python-project-lvl1
 
 from brain_games.cli import welcome_user
-from .brain_even import even
-from .brain_calc import calc
+from brain_even import even
+from brain_calc import calc
 
 def main():
     print("Welcome to the Brain Games!")
