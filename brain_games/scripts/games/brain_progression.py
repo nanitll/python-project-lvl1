@@ -18,8 +18,7 @@ def generate_number_list() :
 def main():
     name_user = brain_games.cli.welcome_user()
     print("What number is missing in the progression?")
-    i = 0
-    while i < 3:
+    for __i in range(3):
         n = random.randint(0 , 9)
         list_number = generate_number_list()
         right_answer = list_number[n]
@@ -31,7 +30,6 @@ def main():
         else:
             brain_games.cli.wrong_answer(answer, right_answer, name_user)
             return 0
-        i+=1
     print("Congratulations, {}!".format(name_user))
     
     return 0
