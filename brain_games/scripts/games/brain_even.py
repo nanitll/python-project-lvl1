@@ -13,7 +13,6 @@ def checking_answer(number):
 
 def main():
     user_name = brain_games.cli.welcome_user()
-    print("Welcome to the Brain Games!")
     print('Answer "yes" if the number is even, otherwise answer "no".')
     for i in range(3):
         random_number = random.randint(1,50)
