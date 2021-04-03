@@ -38,6 +38,8 @@ def main():
         else:
             brain_games.cli.wrong_answer(answer,right_answer,user_name)
             return 0
+    
+    print("Congratulations, {}!".format(user_name))
     return 0
     
 if __name__ == "__main__":
