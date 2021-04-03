@@ -26,26 +26,30 @@ def rand_mult():
     s = [x,y,str(mult)]
     return s
 
-def main():
-    user_name = brain_games.cli.welcome_user()
-    print("What is the result of the expression?")
-    for i in range (3):
+def culc_rand():
         rand_i = random.randint(1,3)
         if rand_i == 1:
             s = rand_summ()
-            print("{} + {}".format(s[0],s[1]))
+            print("What is the result of the expression? {} + {}".format(s[0],s[1]))
+            return s[2]
         elif rand_i == 2:
             s = rand_diff()
-            print("{} - {}".format(s[0],s[1]))
+            print("What is the result of the expression? {} - {}".format(s[0],s[1]))
+            return s[2]
         else:
             s = rand_mult()
-            print("{} * {}".format(s[0],s[1]))
-            
+            print("What is the result of the expression? {} * {}".format(s[0],s[1]))
+            return s[2]
+def main():
+    user_name = brain_games.cli.welcome_user()
+    for i in range (3):
+        right_answer = culc_rand()
+        
         answer = prompt.string("You answer: ")
-        if (answer == s[2]):
+        if (answer == right_answer):
             print ("Correct!")
         else:
-            brain_games.cli.wrong_answer(answer,s[2])
+            brain_games.cli.wrong_answer(answer,right_answer)
             return 0
     print("Congratulations, {}!".format(user_name))
     return 0
