@@ -1,4 +1,4 @@
-#!usr/bin/env python3
+# welcome and wrong_answer
 
 import prompt
 
