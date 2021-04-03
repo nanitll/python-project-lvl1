@@ -1,4 +1,5 @@
 #!usr/bin/env python3
+
 import random
 import prompt
 import brain_games.cli 
@@ -23,7 +24,6 @@ def main() :
         list_number = generate_number_list()
         right_answer =list_number[n]
         list_number[n] = ".."
-        #list_number = list(map(int,input()))
         print("Question: {}".format(' '.join(list_number)))
         answer = prompt.string("Your answer: ")
         if answer == right_answer:

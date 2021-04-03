@@ -1,4 +1,3 @@
-
 make install: poetry install
 make brain-games: poetry run brain-games
 make build: poetry build
