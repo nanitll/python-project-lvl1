@@ -21,9 +21,10 @@ def main():
   
 
     user = str(welcome_user())  
-    print("\nHello, {}".format(user))  
+    print("Hello, {}".format(user)) 
+     
     while (True):
-        act = prompt.string("")
+        act = prompt.string()
         if act == "brain-calc": calc(user) 
         elif act == "brain-even": even(user) 
         elif act == "brain-gcd": gcd(user) 
