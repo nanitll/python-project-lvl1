@@ -41,7 +41,7 @@ def calc(name):
             print("{} * {}".format(s[0],s[1]))
             
         answer = prompt.string("You answer: ")
-        if (int(answer) == s[2]):
+        if (answer == str(s[2])):
             print ("Correct!")
         else:
             print("'{}' is wrong answer ;(. Correct answer was '{}'.".format(answer,s[2]))
