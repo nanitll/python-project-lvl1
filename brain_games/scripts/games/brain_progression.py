@@ -9,7 +9,7 @@ def generate_number_list() :
     z = random.randint(2,6)
     
     for i in range(10) :
-        number_list.append(y)
+        number_list.append(str(y))
         y = y+z
         
     return number_list
@@ -20,9 +20,10 @@ def main() :
     for i in range (3) :
         n = random.randint(0,9)
         list_number = generate_number_list()
-        right_answer = str(list_number[n])
+        right_answer =list_number[n]
         list_number[n] = ".."
-        print("Question: {}".format(list_number))
+        #list_number = list(map(int,input()))
+        print("Question: {}".format(' '.join(list_number)))
         answer = prompt.string("Your answer: ")
         if answer == right_answer:
             print ("Correct!")
