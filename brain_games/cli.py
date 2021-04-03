@@ -5,7 +5,6 @@ import prompt
 def welcome_user():
     print("Welcome to the Brain Games!")
     name = prompt.string("May I have your name? ")
-    print("Hello, {}".format(name))
     return str(name)
 
 def wrong_answer(answer,right_answer,name = ''):
