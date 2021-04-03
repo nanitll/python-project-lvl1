@@ -9,8 +9,8 @@ def main():
     print("Welcome to the Brain Games!")
     user = str(welcome_user())    
     #even(user)
-    calc(user)
-    #gcd(user)
+    #calc(user)
+    gcd(user)
 
 
     
