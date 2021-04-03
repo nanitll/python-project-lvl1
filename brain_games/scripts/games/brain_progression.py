@@ -22,7 +22,7 @@ def main() :
         list_number = generate_number_list()
         right_answer = str(list_number[n])
         list_number[n] = ".."
-        print("Question: {}".format(list_number))
+        print("Question: {}".format(str(list_number)[1:-1]))
         answer = prompt.string("Your answer: ")
         if answer == right_answer:
             print ("Correct!")
