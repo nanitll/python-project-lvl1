@@ -30,7 +30,7 @@ def main() :
         else:
             brain_games.cli.wrong_answer(answer,right_answer,name_user)
             return 0
-    print("Congratulations, {}".format(name_user))
+    print("Congratulations, {}!".format(name_user))
     return 0
 
 if __name__ == "__main__":
