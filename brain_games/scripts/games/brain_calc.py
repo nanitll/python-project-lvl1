@@ -50,7 +50,7 @@ def main():
         if (answer == right_answer):
             print ("Correct!")
         else:
-            brain_games.cli.wrong_answer(answer,right_answer)
+            brain_games.cli.wrong_answer(answer,right_answer,user_name)
             return 0
     print("Congratulations, {}!".format(user_name))
     return 0
