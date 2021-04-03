@@ -2,6 +2,7 @@
 
 import prompt
 import random
+from brain_games.cli import wrong_answer
         
 def checking_answer(number):
     if number % 2 == 0:
@@ -16,13 +17,11 @@ def even(name):
         random_number = random.randint(1,50)
         print("Question: {}".format(random_number))
         answer = prompt.string("You answer: ")
-
-        if (checking_answer(random_number) == answer):
+        right_answer = checking_answer(random_number)
+        if (right_answer == answer):
             print("Correct!")
-        elif (checking_answer(random_number) == "yes"):
-            print("'{}' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, {}!".format(answer,name))
+        else:
+            wrong_answer(answer, right_answer, name)
             return 0
-        elif (checking_answer(random_number) == "no"):
-            print("'{}' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, {}!".format(answer,name))
-            return 0
+        
     print("Congratulations, {}!".format(name))

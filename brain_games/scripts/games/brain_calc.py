@@ -2,29 +2,29 @@
 
 import prompt
 import random
+from brain_games.cli import wrong_answer 
 
 
 def rand_summ():
     x = random.randint(0,10)
     y = random.randint(0,10)
     summ = x + y
-    s = [x,y,summ]
+    s = [x,y,str(summ)]
     return s
 
 def rand_diff():
     x = random.randint(0,10)
     y = random.randint(0,10)
     diff = x - y
-    s = [x,y,diff]
+    s = [x,y,str(diff)]
     return s
 
 def rand_mult():
     x = random.randint(0,10)
     y = random.randint(0,10)
     mult = x * y
-    s = [x,y,mult]
+    s = [x,y,str(mult)]
     return s
-
 
 def calc(name):
     print("What is the result of the expression?")
@@ -41,10 +41,10 @@ def calc(name):
             print("{} * {}".format(s[0],s[1]))
             
         answer = prompt.string("You answer: ")
-        if (answer == str(s[2])):
+        if (answer == s[2]):
             print ("Correct!")
         else:
-            print("'{}' is wrong answer ;(. Correct answer was '{}'.".format(answer,s[2]))
+            wrong_answer(answer,s[2])
             return 0
     print("Congratulations, {}!".format(name))
     return 0
