@@ -15,6 +15,7 @@ def generate_number_list() :
     return number_list
 
 def progression(name_user) :
+    print("Welcome to the Brain Games!")
     print("What number is missing in the progression?")
     for i in range (3) :
         n = random.randint(0,9)

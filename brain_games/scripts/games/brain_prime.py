@@ -26,6 +26,7 @@ def prime_check(number):
     return answer
 
 def prime(user_name):
+    print("Welcome to the Brain Games!")
     print('Answer "yes" if given number is prime. Otherwise answer "no".')
     for i in range (3):
         random_number = random.randint(0,50)

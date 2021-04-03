@@ -15,7 +15,7 @@ def calc_gcd(x,y):
     return x+y
 
 def gcd(name):
-    
+    print("Welcome to the Brain Games!")
     print("Find the greatest common divisor of given numbers.")
     for i in range(3):
         random_number_one = random.randint(1,50)

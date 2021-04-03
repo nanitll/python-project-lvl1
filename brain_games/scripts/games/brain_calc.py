@@ -27,6 +27,7 @@ def rand_mult():
     return s
 
 def calc(name):
+    print("Welcome to the Brain Games!")
     print("What is the result of the expression?")
     for i in range (3):
         rand_i = random.randint(1,3)
