@@ -11,7 +11,6 @@ def calc_gcd(x,y):
             x = x % y
         else:
             y = y % x
-
     return x+y
 
 def main():
@@ -29,7 +28,5 @@ def main():
             cli.wrong_answer(answer, right_answer, user_name)
             return 0
     print("Congratulations, {}!".format(user_name))
-
-
 if __name__ == "__main__":
     main()
