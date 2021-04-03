@@ -24,8 +24,8 @@ def menu(user,act):
         elif act == "brain-progression": 
             progression(user) 
             act = prompt.string("")
-        elif act == "logout" or act == "expect": break
-        else: act = prompt.string("")
+        else: break
+        act = prompt.string("")
 
 def main():
     while(True):
@@ -34,7 +34,7 @@ def main():
             user = str(welcome_user()) 
             menu(user,act) 
             break 
-        if act == "logout" or act == "expect": break
+        #if act == "logout" or act == "expect": break
     return 0
     
 
