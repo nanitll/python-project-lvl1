@@ -12,12 +12,11 @@ def checking_answer(number):
 
 def even(name):
     print('Answer "yes" if the number is even, otherwise answer "no".')
-    i = 0
     for i in range(3):
         random_number = random.randint(1,50)
         print("Question: {}".format(random_number))
         answer = prompt.string("You answer: ")
-        
+
         if (checking_answer(random_number) == answer):
             print("Correct!")
         elif (checking_answer(random_number) == "yes"):
