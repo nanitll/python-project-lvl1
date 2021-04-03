@@ -3,7 +3,7 @@
 import random
 import prompt
 import math
-from brain_games.cli import wrong_answer
+import brain_games.cli 
 
 def prime_check(number):
     
@@ -25,8 +25,8 @@ def prime_check(number):
     answer = 'yes'    
     return answer
 
-def prime(user_name):
-    print("Welcome to the Brain Games!")
+def main():
+    user_name = brain_games.cli.welcome_user()
     print('Answer "yes" if given number is prime. Otherwise answer "no".')
     for i in range (3):
         random_number = random.randint(0,50)
@@ -36,6 +36,9 @@ def prime(user_name):
         if answer == right_answer:
             print ("Correct!")
         else:
-            wrong_answer(answer,right_answer,user_name)
+            brain_games.cli.wrong_answer(answer,right_answer,user_name)
             return 0
     return 0
+    
+if __name__ == "__main__":
+    main()

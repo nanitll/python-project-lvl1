@@ -2,7 +2,7 @@
 
 import prompt
 import random
-from brain_games.cli import wrong_answer 
+import brain_games.cli
 
 
 def rand_summ():
@@ -26,8 +26,8 @@ def rand_mult():
     s = [x,y,str(mult)]
     return s
 
-def calc(name):
-    print("Welcome to the Brain Games!")
+def main():
+    user_name = brain_games.cli.welcome_user()
     print("What is the result of the expression?")
     for i in range (3):
         rand_i = random.randint(1,3)
@@ -45,7 +45,11 @@ def calc(name):
         if (answer == s[2]):
             print ("Correct!")
         else:
-            wrong_answer(answer,s[2])
+            brain_games.cli.wrong_answer(answer,s[2])
             return 0
-    print("Congratulations, {}!".format(name))
+    print("Congratulations, {}!".format(user_name))
     return 0
+
+
+if __name__ == "__main__":
+    main()

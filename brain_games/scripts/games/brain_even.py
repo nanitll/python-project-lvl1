@@ -2,7 +2,7 @@
 
 import prompt
 import random
-from brain_games.cli import wrong_answer
+import brain_games.cli
         
 def checking_answer(number):
     if number % 2 == 0:
@@ -11,7 +11,8 @@ def checking_answer(number):
         correct_answer = "no"
     return correct_answer
 
-def even(name):
+def main():
+    user_name = brain_games.cli.welcome_user()
     print("Welcome to the Brain Games!")
     print('Answer "yes" if the number is even, otherwise answer "no".')
     for i in range(3):
@@ -22,7 +23,10 @@ def even(name):
         if (right_answer == answer):
             print("Correct!")
         else:
-            wrong_answer(answer, right_answer, name)
+            brain_games.cli.wrong_answer(answer, right_answer, user_name)
             return 0
-        
-    print("Congratulations, {}!".format(name))
+    print("Congratulations, {}!".format(user_name))
+    return 0
+
+if __name__ == "__main__":
+    main()

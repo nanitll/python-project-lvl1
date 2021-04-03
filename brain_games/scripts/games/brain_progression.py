@@ -1,7 +1,7 @@
 #!usr/bin/env python3
 import random
 import prompt
-from brain_games.cli import wrong_answer
+import brain_games.cli 
 
 def generate_number_list() :
     number_list=[]
@@ -14,8 +14,8 @@ def generate_number_list() :
         
     return number_list
 
-def progression(name_user) :
-    print("Welcome to the Brain Games!")
+def main() :
+    name_user = brain_games.cli.welcome_user()
     print("What number is missing in the progression?")
     for i in range (3) :
         n = random.randint(0,9)
@@ -27,10 +27,12 @@ def progression(name_user) :
         if answer == right_answer:
             print ("Correct!")
         else:
-            wrong_answer(answer,right_answer,name_user)
+            brain_games.cli.wrong_answer(answer,right_answer,name_user)
             return 0
     print("Congratulations, {}".format(name_user))
+    return 0
 
-
+if __name__ == "__main__":
+    main()
 
 

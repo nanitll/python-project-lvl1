@@ -14,8 +14,8 @@ def calc_gcd(x,y):
 
     return x+y
 
-def gcd(name):
-    print("Welcome to the Brain Games!")
+def main():
+    user_name = cli.welcome_user()
     print("Find the greatest common divisor of given numbers.")
     for i in range(3):
         random_number_one = random.randint(1,50)
@@ -26,6 +26,10 @@ def gcd(name):
         if answer == str(right_answer):
             print("Correct!")
         else:
-            cli.wrong_answer(answer, right_answer, name)
+            cli.wrong_answer(answer, right_answer, user_name)
             return 0
-    print("Congratulations, {}".format(name))
+    print("Congratulations, {}".format(user_name))
+
+
+if __name__ == "__main__":
+    main()
