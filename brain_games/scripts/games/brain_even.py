@@ -3,7 +3,8 @@
 import prompt
 import random
 import brain_games.cli
-        
+
+
 def checking_answer(number):
     if number % 2 == 0:
         correct_answer = "yes"
@@ -15,7 +16,7 @@ def main():
     user_name = brain_games.cli.welcome_user()
     print('Answer "yes" if the number is even, otherwise answer "no".')
     for __i in range(3):
-        random_number = random.randint(1,50)
+        random_number = random.randint(1, 50)
         print("Question: {}".format(random_number))
         answer = prompt.string("You answer: ")
         right_answer = checking_answer(random_number)
@@ -26,6 +27,7 @@ def main():
             return 0
     print("Congratulations, {}!".format(user_name))
     return 0
+
 
 if __name__ == "__main__":
     main()
