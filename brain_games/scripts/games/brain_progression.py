@@ -10,11 +10,7 @@ def generate_number_list() :
     
     for i in range(10) :
         number_list.append(str(y))
-<<<<<<< HEAD
-        y = y+z
-=======
         y = y+z+i
->>>>>>> cf8c36b6887df0a656f87b7d31cb5822a32842e8
         
     return number_list
 
