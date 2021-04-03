@@ -10,7 +10,7 @@ def welcome_user():
 
 def wrong_answer(answer, right_answer, name=''):
     if name == '':
-        print("'{}' is wrong answer ;(. Correct answer was '{}'".format(answer, right_answer))
+        print("'{}' is wrong answer ;(. Correct answer was '{}'".format(answer, right_answer)) # noqa: E501
     else:
-        print("'{}' is wrong answer ;(. Correct answer was '{}'.\nLet's try again, {}!".format(answer, right_answer, name))
+        print("'{}' is wrong answer ;(. Correct answer was '{}'.\nLet's try again, {}!".format(answer, right_answer, name)) # noqa: E501
     return 0
